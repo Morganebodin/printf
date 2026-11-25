@@ -6,11 +6,11 @@
 #    By: idea <idea@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/23 16:31:06 by mbodin            #+#    #+#              #
-#    Updated: 2026/11/25 12:06:27 by idea             ###   ########.fr        #
+#    Updated: 2026/11/25 21:37:09 by idea             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ft_printf.a
+NAME = libftprintf.a
 
 CC = gcc
 CFLAGS = -c -Wall -Wextra -Werror
@@ -18,6 +18,7 @@ CFLAGS = -c -Wall -Wextra -Werror
 SRCS =	ft_dispatch.c \
 		ft_utils.c \
 		ft_printf.c \
+		ft_putptr.c \
 
 DEPS = ft_printf.h
 

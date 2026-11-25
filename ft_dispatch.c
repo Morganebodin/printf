@@ -6,7 +6,7 @@
 /*   By: mbodin <mbodin@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 14:01:21 by mbodin            #+#    #+#             */
-/*   Updated: 2026/11/24 16:27:11 by mbodin           ###   ########.fr       */
+/*   Updated: 2026/11/25 17:56:07 by mbodin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_dispatch(va_list args, char c)
 {
-	int	sum;
+	int		sum;
 
 	sum = 0;
 	if (c == 'c')
@@ -26,11 +26,11 @@ int	ft_dispatch(va_list args, char c)
 	else if (c == 'u')
 		sum = ft_putnbr((int)va_arg(args, unsigned int));
 	else if (c == 'x')
-		sum = ;
+		sum = ft_hex(va_arg(args, unsigned int), c);
 	else if (c == 'X')
-		sum = ;
+		sum = ft_hex(va_arg(args, unsigned int), c);
 	else if (c == 'p')
-		sum = ;
+		sum = ft_print_ptr(va_arg(args, void *));
 	else
 		sum = ft_putchar('%');
 	return (sum);
