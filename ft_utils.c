@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbodin <mbodin@student.42nice.fr>          +#+  +:+       +#+        */
+/*   By: idea <idea@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 15:51:27 by mbodin            #+#    #+#             */
-/*   Updated: 2026/11/24 17:30:10 by mbodin           ###   ########.fr       */
+/*   Updated: 2026/11/25 12:20:33 by idea             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,15 +54,32 @@ int	ft_putnbr(int nb)
 	return (sum);
 }
 
-int	ft_hex(unsigned int nb)
+int	ft_hex(unsigned int nb, char format)
 {
 	int	sum;
+	int	mod;
 
 	sum = 0;
 	if (nb >= 16)
+		sum = sum + ft_hex(nb / 16, format);
+	mod = nb % 16;
+	if (mod >= 10)
 	{
-		ft_putnbr(nb / 16);
+		if (format == 'x')
+			ft_putchar(mod - 10 + 'a');
+		else
+			ft_putchar(mod - 10 + 'A');
 	}
-	sum = sum + ft_putchar(nb % 16);
+	else
+		ft_putchar(mod + '0');
+	sum++;
 	return (sum);
+}
+
+static int	ft_put_ptr_hex(void *ptr)
+{
+	uintptr_t	nb;
+
+	nb = (uintptr_t)ptr;
+
 }
