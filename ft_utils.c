@@ -6,7 +6,7 @@
 /*   By: idea <idea@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 15:51:27 by mbodin            #+#    #+#             */
-/*   Updated: 2026/11/25 12:20:33 by idea             ###   ########.fr       */
+/*   Updated: 2026/11/25 12:22:42 by idea             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,5 @@ static int	ft_put_ptr_hex(void *ptr)
 	uintptr_t	nb;
 
 	nb = (uintptr_t)ptr;
-
+	
 }
