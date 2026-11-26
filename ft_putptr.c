@@ -6,7 +6,7 @@
 /*   By: mbodin <mbodin@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 15:28:38 by mbodin            #+#    #+#             */
-/*   Updated: 2026/11/26 15:53:09 by mbodin           ###   ########.fr       */
+/*   Updated: 2026/11/26 17:04:10 by mbodin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	ft_put_ptr_hex(void *ptr)
 	mod = nb % 16;
 	sum = 0;
 	if (nb >= 16)
-		sum = sum + ft_put_ptr_hex((void *)(nb/16));
+		sum = sum + ft_put_ptr_hex((void *)(nb / 16));
 	if (mod >= 10)
 		ft_putchar(mod - 10 + 'a');
 	else
