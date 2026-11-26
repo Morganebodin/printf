@@ -6,7 +6,7 @@
 /*   By: mbodin <mbodin@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 15:51:27 by mbodin            #+#    #+#             */
-/*   Updated: 2026/11/25 15:28:54 by mbodin           ###   ########.fr       */
+/*   Updated: 2026/11/26 16:29:27 by mbodin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ int	ft_putstr(char *str)
 	int	i;
 
 	i = 0;
+	if (!str)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	while (str[i] != '\0')
 	{
 		write(1, &str[i], 1);
@@ -48,7 +53,7 @@ int	ft_putnbr(int nb)
 	}
 	if (nb >= 10)
 	{
-		ft_putnbr(nb / 10);
+		sum = sum + ft_putnbr(nb / 10);
 	}
 	sum = sum + ft_putchar(nb % 10 + '0');
 	return (sum);
@@ -73,5 +78,18 @@ int	ft_hex(unsigned int nb, char format)
 	else
 		ft_putchar(mod + '0');
 	sum++;
+	return (sum);
+}
+
+int	ft_unsigned_putnbr(unsigned int nb)
+{
+	int	sum;
+
+	sum = 0;
+	if (nb >= 10)
+	{
+		sum = sum + ft_unsigned_putnbr(nb / 10);
+	}
+	sum = sum + ft_putchar(nb % 10 + '0');
 	return (sum);
 }

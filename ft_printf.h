@@ -6,7 +6,7 @@
 /*   By: mbodin <mbodin@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 16:50:07 by mbodin            #+#    #+#             */
-/*   Updated: 2026/11/25 16:31:14 by mbodin           ###   ########.fr       */
+/*   Updated: 2026/11/26 16:04:20 by mbodin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int			ft_putchar(char c);
 int			ft_putnbr(int nb);
 int			ft_hex(unsigned int nb, char format);
 int			ft_print_ptr(void *ptr);
+int			ft_unsigned_putnbr(unsigned int nb);
 
 #endif
